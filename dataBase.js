@@ -1,11 +1,11 @@
 // Слова
 const baseWords = [
-  ['Как переводится hello?', 'привет'],
-  ['2й вопрос', '2й индекс ответ'],
+  ['Как переводится hello?  1', 'привет'],
+  ['2й вопрос 1', '2й индекс ответ'],
 ];
 
 // Предложения
-const baseSpeech = [
-  ['hello my name Eugene', 'привет мое имя женя'],
-  ['I am from Ukraine', 'я из украины'],
+const baseSpeach = [
+  ['hello my name Eugene 2', 'привет мое имя женя'],
+  ['I am from Ukraine 2', 'я из украины'],
 ];

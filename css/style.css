@@ -114,28 +114,29 @@ body {
   visibility: visible;
 }
 
-.questionBlock {
+.questionWords {
   background-color: rgb(75, 75, 75);
   padding: 50px 20px;
 }
-.questionBlock-content {
+.questionWords-content {
 }
-.questionBlock-content__question {
+.questionWords-content__question {
 }
-.questionBlock-content__input {
+.questionWords-content__input {
   height: 50px;
   margin: 10px 0;
 }
-.questionButton-content__btn {
+.questionWords-content__btn {
   display: block;
   padding: 20px 60px;
 }
 
-.correctAnswer {
+
+.correctWordsAnswer, .correctSpeachAnswer {
   font-size: 0;
   position: relative;
 }
-.correctAnswer:before {
+.correctWordsAnswer:before {
   content: '';
   background: url('../img/correctAnswer.svg') no-repeat;
   position: absolute;
@@ -144,15 +145,37 @@ body {
   width: 25px;
   height: 30px;
   cursor: pointer;
-  transition: .4s linear;
+  transition: 0.4s linear;
 }
-.correctAnswer:hover:before {
+.correctSpeachAnswer:before {
+  content: '';
+  background: url('../img/correctAnswer.svg') no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+.correctWordsAnswer:hover:before {
   opacity: 0.5;
   transform: rotate(-360deg);
 }
-.correctAnswer.show {
+.correctWordsAnswer.show {
   font-size: 16px;
 }
-.correctAnswer.show:before {
+.correctWordsAnswer.show:before {
+  display: none;
+}
+
+.correctSpeachAnswer:hover:before {
+  opacity: 0.5;
+  transform: rotate(-360deg);
+}
+.correctSpeachAnswer.show {
+  font-size: 16px;
+}
+.correctSpeachAnswer.show:before {
   display: none;
 }

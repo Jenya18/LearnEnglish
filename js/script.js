@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const popupMain = document.querySelector('#popupMain-js');
   const popupMask = document.querySelector('#popupMask-js');
-  const popup = document.querySelector('#popup-js');
+  // const popup = document.querySelector('#popup-js');
   const openWordList = document.querySelector('#openWordList-js');
 
   openWordList.addEventListener('click', function () {
@@ -15,41 +15,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const questionTitle = document.querySelector(
-    '#questionBlock-content__question-js'
+  // words
+  const questionWordsTitle = document.querySelector(
+    '#questionWords-content__question-js'
   );
-  const questionInput = document.querySelector(
-    '#questionBlock-content__input-js'
+  const questionWordsInput = document.querySelector(
+    '#questionWords-content__input-js'
   );
-  const questionButton = document.querySelector(
-    '#questionButton-content__btn-js'
+  const questionWordsButton = document.querySelector(
+    '#questionWords-content__btn-js'
   );
-  const correctAnswer = document.querySelector('#correctAnswer-js');
+  const correctWordAnswer = document.querySelector('#correctWordAnswer-js');
 
-  // const baseWordsWords = [
-  //   ['Как переводится hello?', 'привет'],
-  //   ['2й вопрос', '2й индекс ответ'],
-  // ];
+  // speach
+  const questionSpeachTitle = document.querySelector(
+    '#questionSpeech-content__question-js'
+  );
+  const questionSpeachInput = document.querySelector(
+    '#questionSpeech-content__input-js'
+  );
+  const questionSpeachButton = document.querySelector(
+    '#questionSpeech-content__btn-js'
+  );
+  const correctSpeachAnswer = document.querySelector('#correctSpeachAnswer-js');
 
-  let randomNum = Math.floor(Math.random() * baseWords.length);
+  let randomNumWords = Math.floor(Math.random() * baseWords.length);
+  let randomNumSpeach = Math.floor(Math.random() * baseSpeach.length);
 
-  questionTitle.innerText = baseWords[randomNum][0];
-  let save = baseWords[randomNum][1];
+  let saveWords = baseWords[randomNumWords][1];
+  let saveSpeach = baseSpeach[randomNumSpeach][1];
+  function btnClick(save, btn, inputs) {
+    questionWordsTitle.innerText = baseWords[randomNumWords][0];
+    questionSpeachTitle.innerText = baseSpeach[randomNumSpeach][0];
 
-  questionButton.addEventListener('click', function () {
-    if (save == questionInput.value) {
-      location.reload();
-      alert('Правильно');
-    } else if (questionInput.value == '' || questionInput.value == ' ') {
-      alert('Пустое поле');
-    } else {
-      alert('Введенно неверно');
-    }
-  });
+    btn.addEventListener('click', function () {
+      if (save == inputs.value) {
+        location.reload();
+        alert('Правильно');
+      } else if (inputs.value == '' || inputs.value == ' ') {
+        alert('Пустое поле');
+      } else {
+        alert('Введенно неверно');
+      }
+    });
 
-  correctAnswer.addEventListener('click', function () {
-    correctAnswer.textContent = save;
-    correctAnswer.classList.add('show');
-  });
+    correcAnswer(correctWordAnswer, saveWords);
+    correcAnswer(correctSpeachAnswer, saveSpeach);
+  }
 
+  btnClick(saveWords, questionWordsButton, questionWordsInput);
+  btnClick(saveSpeach, questionSpeachButton, questionSpeachInput);
+
+  function correcAnswer(e, save) {
+    e.addEventListener('click', function () {
+      e.textContent = save;
+      e.classList.add('show');
+    });
+  }
 });
+
+// Динамически из файла в таблицу создавать слова
+// и закинуть в гит хаб бесплатный хостинг сайт
+
+// https://github.com/Jenya18/LearnEnglish

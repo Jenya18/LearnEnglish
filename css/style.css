@@ -1,0 +1,158 @@
+body {
+  background-color: rgb(24, 24, 24);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.popup table {
+  border: 1px solid rgb(58, 22, 22);
+}
+.popup td {
+  border: 1px solid aqua;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.popup td:nth-child(even) {
+  border: 2px solid rgb(69, 155, 29);
+  margin-left: 6px;
+  position: relative;
+}
+.popup td:nth-child(even):before {
+  content: '+';
+  position: absolute;
+  left: -9px;
+  color: green;
+}
+
+.popup tr:nth-child(even) {
+  background-color: rgb(3, 3, 3);
+}
+
+.popup {
+  z-index: 10;
+  position: absolute;
+  overflow-y: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+
+  background: rgba(30, 60, 55, 1);
+  background: -o-linear-gradient(
+    0deg,
+    rgba(30, 60, 55, 1) 0%,
+    rgba(75, 40, 125, 1) 33%,
+    rgba(60, 20, 80, 1) 66%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(30, 60, 55, 1) 0%,
+    rgba(75, 40, 125, 1) 33%,
+    rgba(60, 20, 80, 1) 66%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(30, 60, 55, 1) 0%,
+    rgba(75, 40, 125, 1) 33%,
+    rgba(60, 20, 80, 1) 66%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(30, 60, 55, 1) 0%,
+    rgba(75, 40, 125, 1) 33%,
+    rgba(60, 20, 80, 1) 66%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  -webkit-box-shadow: 10px 10px 23px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 23px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 23px 4px rgba(0, 0, 0, 0.75);
+}
+
+.popupMask {
+  width: 100%;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    31deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(65, 11, 115, 1) 100%
+  );
+  cursor: pointer;
+}
+.popupMask:hover {
+  opacity: 0.5;
+}
+.popupMain {
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s linear;
+}
+.popupMain:hover {
+  background: rgba(128, 0, 0, 0.5);
+}
+
+#popupMain-js.popupShow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.questionBlock {
+  background-color: rgb(75, 75, 75);
+  padding: 50px 20px;
+}
+.questionBlock-content {
+}
+.questionBlock-content__question {
+}
+.questionBlock-content__input {
+  height: 50px;
+  margin: 10px 0;
+}
+.questionButton-content__btn {
+  display: block;
+  padding: 20px 60px;
+}
+
+.correctAnswer {
+  font-size: 0;
+  position: relative;
+}
+.correctAnswer:before {
+  content: '';
+  background: url('../img/correctAnswer.svg') no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 30px;
+  cursor: pointer;
+  transition: .4s linear;
+}
+.correctAnswer:hover:before {
+  opacity: 0.5;
+  transform: rotate(-360deg);
+}
+.correctAnswer.show {
+  font-size: 16px;
+}
+.correctAnswer.show:before {
+  display: none;
+}

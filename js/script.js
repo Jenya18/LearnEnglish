@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // speach
   const questionSpeachTitle = document.querySelector(
-    '#questionSpeech-content__question-js'
+    '#questionSpeach-content__question-js'
   );
   const questionSpeachInput = document.querySelector(
-    '#questionSpeech-content__input-js'
+    '#questionSpeach-content__input-js'
   );
   const questionSpeachButton = document.querySelector(
-    '#questionSpeech-content__btn-js'
+    '#questionSpeach-content__btn-js'
   );
   const correctSpeachAnswer = document.querySelector('#correctSpeachAnswer-js');
 
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// и сделать чтобы только маленькими буквами можно было писать, и чтобы на энтер можно было отправлять. и сделать проверку на ввод, если правельно ввел(но не отправил) то в инпуте будет галочка.
 
 // Динамически из файла в таблицу создавать слова
 // и закинуть в гит хаб бесплатный хостинг сайт

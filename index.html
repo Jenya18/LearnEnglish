@@ -9,88 +9,87 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="popupMain" id="popupMain-js">
-        <div
-          class="popupMask"
-          id="popupMask-js"
-          title="Close this window"
-        ></div>
-        <div class="popup" id="popup-js">
-          <table>
-            <tr>
-              <td>Words</td>
-              <td>Слова</td>
-            </tr>
+    <div class="popupMain" id="popupMain-js">
+      <div class="popupMask" id="popupMask-js" title="Close this window"></div>
+      <div class="popup" id="popup-js">
+        <table>
+          <tr>
+            <td>Words</td>
+            <td>Слова</td>
+          </tr>
 
-            <tr>
-              <td>Words</td>
-              <td>Слова</td>
-            </tr>
+          <tr>
+            <td>Words</td>
+            <td>Слова</td>
+          </tr>
 
-            <tr>
-              <td>Words</td>
-              <td>Слова</td>
-            </tr>
+          <tr>
+            <td>Words</td>
+            <td>Слова</td>
+          </tr>
 
-            <tr>
-              <td>Words</td>
-              <td>Слова</td>
-            </tr>
-          </table>
-        </div>
+          <tr>
+            <td>Words</td>
+            <td>Слова</td>
+          </tr>
+        </table>
       </div>
-
+    </div>
+    <div class="wrapper">
       <div class="container">
-        <button class="openWordList" id="openWordList-js">Open words</button>
+        <div class="content">
+          <!-- слова -->
+          <div class="questionWords">
+            <div class="questionWords-content">
+              <div
+                class="questionWords-content__question"
+                id="questionWords-content__question-js"
+              >
+                Здесь будет вопрос
+              </div>
+              <input
+                type="text"
+                class="questionWords-content__input"
+                id="questionWords-content__input-js"
+              />
+              <button
+                class="questionWords-content__btn"
+                id="questionWords-content__btn-js"
+              >
+                answer
+              </button>
 
-        <!-- слова -->
-        <div class="questionWords">
-          <div class="questionWords-content">
-            <div
-              class="questionWords-content__question"
-              id="questionWords-content__question-js"
-            >
-              Здесь будет вопрос
+              <div class="correctWordsAnswer" id="correctWordAnswer-js">12</div>
             </div>
-            <input
-              type="text"
-              class="questionWords-content__input"
-              id="questionWords-content__input-js"
-            />
-            <button
-              class="questionWords-content__btn"
-              id="questionWords-content__btn-js"
-            >
-              Ответить
-            </button>
-
-            <div class="correctWordsAnswer" id="correctWordAnswer-js">12</div>
           </div>
-        </div>
 
-        <!-- предложения -->
-        <div class="questionSpeech">
-          <div class="questionSpeech-content">
-            <div
-              class="questionSpeech-content__question"
-              id="questionSpeech-content__question-js"
-            >
-              Здесь будет вопрос
+          <button class="openWordList" id="openWordList-js">Open words</button>
+
+          <!-- предложения -->
+          <div class="questionSpeach">
+            <div class="questionSpeach-content">
+              <div
+                class="questionSpeach-content__question"
+                id="questionSpeach-content__question-js"
+              >
+                Здесь будет вопрос
+              </div>
+              <input
+                type="text"
+                class="questionSpeach-content__input"
+                id="questionSpeach-content__input-js"
+              />
+              <button
+                class="questionSpeach-content__btn"
+                id="questionSpeach-content__btn-js"
+              >
+                answer
+              </button>
+
+              <div class="correctSpeachAnswer" id="correctSpeachAnswer-js">
+                12
+              </div>
             </div>
-            <input
-              type="text"
-              class="questionSpeech-content__input"
-              id="questionSpeech-content__input-js"
-            />
-            <button
-              class="questionSpeech-content__btn"
-              id="questionSpeech-content__btn-js"
-            >
-              Ответить
-            </button>
-
-            <div class="correctSpeachAnswer" id="correctSpeachAnswer-js">12</div>
           </div>
         </div>
       </div>

@@ -1,0 +1,25 @@
+@media(max-width: 1052px) {
+  .container {
+    max-width: 500px;
+  }
+  .questionWords {
+    display: block;
+    width: 100%;
+    padding: 50px 70px;
+  }
+  .questionWords-content__input {
+    width: 100%;
+  }
+  .openWordList {
+    margin: 80px auto;
+    opacity: 1;
+  }
+  .questionSpeach {
+    display: block;
+    width: 100%;
+    padding: 50px 70px;
+  }
+  .questionSpeach-content__input {
+    width: 100%;
+  }
+}
